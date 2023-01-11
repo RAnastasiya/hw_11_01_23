@@ -23,7 +23,7 @@ function Cattle(name, maxVolume, minVolume) {
         return this.currentVolume;
     };
     this.turnOn = function(){
-        if (this.currentVolume > 0 && this.isOn === false) {
+        if (this.currentVolume >= this.minVolume && this.isOn === false) {
             return (this.isOn = true)
         }
         return (this.isOn = false)
